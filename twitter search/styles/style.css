@@ -1,0 +1,17 @@
+.center {
+position: absolute;
+left: 0;
+top: 6%;
+width: 100%;
+text-align: center;
+font-size: 60px;}
+
+#banner {
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+width: 100%;
+height: 200px;
+z-index: -1;
+}

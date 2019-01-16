@@ -1,46 +1,68 @@
 <!doctype html>
 <html>
+
 <head>
-<script src="scripts/jquery-3.3.1.min.js"> </script>
-<script src="scripts/jquery.easing.js"> </script>
- <script type="text/javascript" language="javascript">
-    function Preload() {
-    $.getJSON("api.php", function(json){
-            var hashtag = json[0].hashtag;
-            console.info(hashtag)
-       // console.dir(json[0]);
 
-        //console.info(json[0].Msg);
-        // if("skybetgp2off"){
-             
-        //     console.dir(json)
-        // }
-        // else{("skybetgp2on")
-        //     console.dir(json)
-        // }
-    })
-    }
 
-</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="styles/style.css" rel="stylesheet" type="text/css"> 
+
 </head>
+
 <body onLoad="Preload()">
 
+<div id="welcomebanner">
+<img id="banner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYnwTQNl-3wsQsVtF_igJ7ajrkuVA6oazSy4hGDVfurAD__2ry" alt="Banner Image"/>
+<div class="center">SkyBet Has temporarly gone out of service</div>
+</div>
+</banner>
+
+
+
+
+
+
+<!-- <div class="dropdown-notification ">
+      Problems with this facility  <button class="close">Open Game</button>
+   </div> -->
 
 
 <button type="button">Click Me</button>
-<p></p>
-<script>
-  $("buttoen").click(function(){
-  $.getJSON("api.php", function(json){
-          if("skybetgp2off"){
-            console.dir(json)
+<p></p> <script type="text/javascript" language="javascript">
+    function Preload() {
+    $.getJSON("api.php", function(json){
+            var hashtag = json[0].hashtag;
+           
+       // console.dir(json[0]);
+
+        //console.info(json[0].Msg);
+        if(hashtag === "skybetgp2on"){
+                
+              console.info(hashtag)
         }
-        else{("skybetgp2on")
-            console.dir(json)
-        }
-    });
-  }); 
+        else if(hashtag = "skybetgp2off"){ 
+            $("welcomebanner img").ready(function(){
+                $("div#welcomebanner").fadeIn([400]);
+            })
+            console.info(hashtag);
+         } 
+        })
+    }
+
 
 </script>
+<script>
+  //$("button").click(function(){
+//   $.getJSON("api.php", function(json){
+//       var hashtag = json[0].hashtag;
+//             console.info(hashtag)
+//     });
+//   }); 
+
+</script>
+<script src="scripts/jquery-3.3.1.min.js"> </script>
+<script src="scripts/jquery.easing.js"> </script>
 </body>
 </html>
