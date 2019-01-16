@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<script src="scripts/jquery-3.3.1.min.js"> </script>
+<script src="scripts/jquery.easing.js"> </script>
+ <script type="text/javascript" language="javascript">
+    function Preload() {
+    $.getJSON("api.php", function(json){
+    console.dir(json);
+    });}
+
+</script>
+</head>
+<body onLoad="Preload()">
+
+
+
+<button type="button">Click Me</button>
+<p></p>
+<script>
+  $("button").click(function(){
+  $.getJSON("api.php", function(json){
+          console.dir(json)
+    });
+  }); 
+</script>
+</body>
+</html>
