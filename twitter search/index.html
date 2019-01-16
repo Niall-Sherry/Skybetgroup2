@@ -1,10 +1,6 @@
 <!doctype html>
 <html>
-
 <head>
-
-
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="styles/style.css" rel="stylesheet" type="text/css"> 
@@ -14,22 +10,10 @@
 <body onLoad="Preload()">
 
 <div id="welcomebanner">
-    <style>
-div{
-    display:hidden;
-}
-</style>
+
 <img id="banner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYnwTQNl-3wsQsVtF_igJ7ajrkuVA6oazSy4hGDVfurAD__2ry" alt="Banner Image"/>
-<div class="center">SkyBet Has temporarly gone out of service</div>
-
+<div class="center">SkyBet Has temporarly gone out of service, while you wait why not try our new game virtiball</div>
 </div>
-
-
-
-
-
-
-
 <!-- <div class="dropdown-notification ">
       Problems with this facility  <button class="close">Open Game</button>
    </div> -->
@@ -50,23 +34,21 @@ div{
 
         //console.info(json[0].Msg);
         if(hashtag === "skybetgp2on"){
-               $("div#welcomebanner").css('visibility', 'hidden'); 
+               $("div#welcomebanner").css('display', 'none'); 
               console.info(hashtag)
         }
         else if(hashtag = "skybetgp2off"){ 
             
-             $("welcomebanner banner").on('load', function(ev){
-                ev.preventDefault();
-                //$('#welcomebanner').show();
-              $("div#welcomebanner").css('visibility', 'visible');
-                
+             
+              $("div#welcomebanner").css('display', 'block');
+                 $("div#welcomebanner").mouseenter(function(){
+                 window.location.href='homepages.shu.ac.uk/~b7022514/flap_moblie/flappy.html';
+                console.info(hashtag)
             })
-            console.info(hashtag);
-         } 
-        })
-    }
-
-
+        } 
+        
+    })
+}
 </script>
 <script>
   //$("button").click(function(){

@@ -16,7 +16,7 @@ $query = array( "q" => "#skybetgp2off OR #skybetgp2on from:Skybetgroup2",
 $results = $twitter->get('search/tweets', $query);
 
 $resultsAr = array();
-
+//print_r($results);
 foreach ($results->statuses as $result) {
   //print_r($result);
   //  print_r($result->entities->hashtags[0]->text);
