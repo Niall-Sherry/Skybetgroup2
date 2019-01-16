@@ -6,8 +6,20 @@
  <script type="text/javascript" language="javascript">
     function Preload() {
     $.getJSON("api.php", function(json){
-    console.dir(json);
-    });}
+            var hashtag = json[0].hashtag;
+            console.info(hashtag)
+       // console.dir(json[0]);
+
+        //console.info(json[0].Msg);
+        // if("skybetgp2off"){
+             
+        //     console.dir(json)
+        // }
+        // else{("skybetgp2on")
+        //     console.dir(json)
+        // }
+    })
+    }
 
 </script>
 </head>
@@ -18,11 +30,17 @@
 <button type="button">Click Me</button>
 <p></p>
 <script>
-  $("button").click(function(){
+  $("buttoen").click(function(){
   $.getJSON("api.php", function(json){
-          console.dir(json)
+          if("skybetgp2off"){
+            console.dir(json)
+        }
+        else{("skybetgp2on")
+            console.dir(json)
+        }
     });
   }); 
+
 </script>
 </body>
 </html>
