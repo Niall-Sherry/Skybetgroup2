@@ -14,10 +14,16 @@
 <body onLoad="Preload()">
 
 <div id="welcomebanner">
+    <style>
+div{
+    display:hidden;
+}
+</style>
 <img id="banner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYnwTQNl-3wsQsVtF_igJ7ajrkuVA6oazSy4hGDVfurAD__2ry" alt="Banner Image"/>
 <div class="center">SkyBet Has temporarly gone out of service</div>
+
 </div>
-</banner>
+
 
 
 
@@ -31,20 +37,29 @@
 
 <button type="button">Click Me</button>
 <p></p> <script type="text/javascript" language="javascript">
+
+// $('#welcomebanner').on('load', function(display){
+//     $('#welcomebanner').hide();
+//});
     function Preload() {
     $.getJSON("api.php", function(json){
             var hashtag = json[0].hashtag;
            
+          
        // console.dir(json[0]);
 
         //console.info(json[0].Msg);
         if(hashtag === "skybetgp2on"){
-                
+               $("div#welcomebanner").css('visibility', 'hidden'); 
               console.info(hashtag)
         }
         else if(hashtag = "skybetgp2off"){ 
-            $("welcomebanner img").ready(function(){
-                $("div#welcomebanner").fadeIn([400]);
+            
+             $("welcomebanner banner").on('load', function(ev){
+                ev.preventDefault();
+                //$('#welcomebanner').show();
+              $("div#welcomebanner").css('visibility', 'visible');
+                
             })
             console.info(hashtag);
          } 
